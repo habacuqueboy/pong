@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Pong</title>
+        <script src='./ext/aframe.min.js'></script>
+    </head>
+    <body>
+        hello world
+    </body>
+</html>

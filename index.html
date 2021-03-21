@@ -4,13 +4,36 @@
     <head>
         <title>Pong</title>
         <script src='./ext/aframe.min.js'></script>
-        <script src='./lib/components/floor.js'></script>
+        <script src='./ext/ammo.wasm.js'></script>
+        <script src='./ext/aframe-physics-system.min.js'></script>
     </head>
     <body>
-     <a-scene>
-            <!-- desenha o chão -->
-           <a-entity floor="width: 0.5; height: 0.25; depth: 1; color: orange"
-            position="0 0 -3"></a-entity>
-    </a-scene>
-    </body>
+
+
+
+<a-scene physics=" driver: ammo; debug: true; debugDrawMode: 1;">
+
+    <a-assets>
+      <img id="madeira" src="./assets/madeira.jpg">
+      <img id="madeira5" src="./assets/madeira5.png">
+    </a-assets>
+
+    <!-- chao da mesa -->
+    <a-box src="#madeira" ammo-body="type: static" ammo-shape="type: box" position="0 -10 -25" depth="25" width="10">
+
+        <!-- bola -->
+        <a-sphere color="tomato" ammo-body="type: dynamic" ammo-shape="type: sphere" radius="0.5" position="0 5 0"></a-sphere>
+
+        <!-- parede esquerda da mesa -->
+        <a-box src="#madeira5" ammo-body="type: static" ammo-shape="type: box" position="-5.5 1 0" depth="25"></a-box>
+
+        <!-- parede direita da mesa -->
+        <a-box src="#madeira5" ammo-body="type: static" ammo-shape="type: box" position="5.5 1  0" depth="25"></a-box>
+
+    </a-box>
+
+
+</a-scene>
+
+</body>
 </html>

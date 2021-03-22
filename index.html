@@ -4,14 +4,14 @@
     <head>
         <title>Pong</title>
         <script src='./ext/aframe.min.js'></script>
-        <script src='./ext/ammo.wasm.js'></script>
-        <script src='./ext/aframe-physics-system.min.js'></script>
+        <script src='./lib/components/velocidade.js'></script>
+        <script src='./lib/components/quica-parede.js'></script>
     </head>
     <body>
 
 
 
-<a-scene physics=" driver: ammo; debug: true; debugDrawMode: 1;">
+<a-scene id="#cena">
 
     <a-assets>
       <img id="madeira" src="./assets/madeira.jpg">
@@ -19,16 +19,21 @@
     </a-assets>
 
     <!-- chao da mesa -->
-    <a-box src="#madeira" ammo-body="type: static" ammo-shape="type: box" position="0 -10 -25" depth="25" width="10">
+    <a-box src="#madeira" position="0 -10 -25" depth="25" width="10">
 
         <!-- bola -->
-        <a-sphere color="tomato" ammo-body="type: dynamic" ammo-shape="type: sphere" radius="0.5" position="0 5 0"></a-sphere>
+        <a-sphere class="bola" metalness="0.2" velocidade quica-parede color="tomato" shadow radius="0.5" position="0 1.1 0"></a-sphere>
 
         <!-- parede esquerda da mesa -->
-        <a-box src="#madeira5" ammo-body="type: static" ammo-shape="type: box" position="-5.5 1 0" depth="25"></a-box>
+        <a-box id="#esquerda" src="#madeira5" position="-5.5 1 0" depth="25"></a-box>
 
         <!-- parede direita da mesa -->
-        <a-box src="#madeira5" ammo-body="type: static" ammo-shape="type: box" position="5.5 1  0" depth="25"></a-box>
+        <a-box id="#direita" src="#madeira5" position="5.5 1  0" depth="25"></a-box>
+
+        <!-- parede da frente da mesa -->
+        <a-box id="#esquerda" src="#madeira5" rotation="0 90 0" position="0 1 -12.7" depth="10"></a-box>
+        <!-- parede de tras da mesa -->
+        <a-box id="#esquerda" src="#madeira5" rotation="0 90 0" position="0 1 12.7" depth="10"></a-box>
 
     </a-box>
 

@@ -9,6 +9,8 @@
         <script src='./lib/components/ponto.js'></script>
         <script src='./lib/components/teclado.js'></script>
         <script src='./lib/components/quica-player.js'></script>
+        <script src='./lib/components/quica-inimigo.js'></script>
+
     </head>
     <body>
 
@@ -21,9 +23,9 @@
         <img id="cubes" src="./assets/cubes.jpg">
     </a-assets>
 
-    <!-- Musica de rock 16bits -->
+    <!-- Musica de rock 16bits 
     <a-sound src="./assets/Paranoid.mp3" volume="2 " autoplay="true" loop="true"></a-sound>
-
+-->
     <a-sky id="image-360" radius="100" src="#cubes"></a-sky>
 
     <!-- Camera -->
@@ -50,6 +52,7 @@
             velocidade 
             quica-parede 
             quica-player
+            quica-inimigo
             ponto 
             color="tomato" 
             shadow 
@@ -65,11 +68,10 @@
         <a-box id="#esquerda" src="#madeira2" rotation="0 90 0" position="0 1 -20" depth="19"></a-box>
         <!-- parede de tras da mesa -->
         <a-box id="#esquerda" src="#madeira2" rotation="0 90 0" position="0 1 20" depth="19"></a-box>
-
         <!--Player-->
         <a-box id="player" teclado color="#044f18" rotation="0 90 0" position="0 1 17" depth="5"></a-box>
         <!--Inimigo-->
-        <a-box id="inimigo" color="#ad0a0a" rotation="0 90 0" position="0 1 -17" depth="5"></a-box>
+        <a-box id="inimigo" teclado color="#ad0a0a" rotation="0 90 0" position="0 1 -17" depth="5"></a-box>
 
     </a-box>
 

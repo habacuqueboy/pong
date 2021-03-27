@@ -7,7 +7,7 @@
         <script src='./lib/components/velocidade.js'></script>
         <script src='./lib/components/quica-parede.js'></script>
         <script src='./lib/components/ponto.js'></script>
-        <script src='./lib/components/ponto.js'></script>
+        <script src='./lib/components/setas.js'></script>
 
     </head>
     <body>
@@ -19,31 +19,29 @@
         <img id="madeira" src="./assets/madeira.jpg">
         <img id="madeira2" src="./assets/madeira2.png">
         <img id="cubes" src="./assets/cubes.jpg">
+    </a-assets>
 
-      </a-assets>
-<!-- Musica de rock 16bits
-<a-sound src="./assets/Paranoid.mp3" volume="2 " autoplay="true" loop="true"></a-sound>
- -->
- <a-sky id="image-360" radius="100" src="#cubes"></a-sky>
+    <!-- Musica de rock 16bits -->
+    <a-sound src="./assets/Paranoid.mp3" volume="2 " autoplay="true" loop="true"></a-sound>
 
-  <!-- Camera -->
- <a-entity rotation="-30 0 0" position="0 0 0">
-    <a-entity id="camera" acceleration="200w" camera look-controls wasd-controls></a-entity>
-</a-entity>
+    <a-sky id="image-360" radius="100" src="#cubes"></a-sky>
 
-
+    <!-- Camera -->
+    <a-entity rotation="-30 0 0" position="0 0 0">
+        <a-entity id="camera" acceleration="200w" camera look-controls wasd-controls></a-entity>
+    </a-entity>
 
 
-        <!--Placar-->
-        <a-text id="placar"
-        value="PLACAR\n0 X 0" position="0 2 -25" color="#d9d9d9" align="center" width= 16 scale="2 2 2"
-        geometry="primitive: plane; width: 4; height: auto" 
-        material="color: #262626" wrapCount= 35 zOffset= 0.1>
-        </a-text>
+    <!--Placar-->
+    <a-text id="placar"
+    value="PLACAR\n0 X 0" position="0 2 -25" color="#d9d9d9" align="center" width= 16 scale="2 2 2"
+    geometry="primitive: plane; width: 4; height: auto" 
+    material="color: #262626" wrapCount= 35 zOffset= 0.1>
+    </a-text>
                   
 
-        <!-- chao da mesa -->
-        <a-box src="#madeira" position="0 -7 -23" depth="40" width="20">
+    <!-- chao da mesa -->
+    <a-box src="#madeira" position="0 -7 -23" depth="40" width="20">
 
         <!-- bola -->
         <a-sphere class="bola" metalness="0.2" velocidade quica-parede ponto color="tomato" shadow radius="0.5" position="0 1.1 0"></a-sphere>
@@ -58,7 +56,7 @@
         <a-box id="#esquerda" src="#madeira2" rotation="0 90 0" position="0 1 20" depth="19"></a-box>
 
         <!--Player-->
-        <a-box id="#player" color="#044f18" rotation="0 90 0" position="0 1 17" depth="5"></a-box>
+        <a-box id="#player" setas color="#044f18" rotation="0 90 0" position="0 1 17" depth="5"></a-box>
         <!--Inimigo-->
         <a-box id="#inimigo" color="#ad0a0a" rotation="0 90 0" position="0 1 -17" depth="5"></a-box>
 

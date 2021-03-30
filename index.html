@@ -30,11 +30,14 @@
 -->
     <a-sky id="image-360" radius="100" src="#cubes"></a-sky>
 
-    <!-- Camera -->
+    <!-- Camera
     <a-entity rotation="-30 0 0" position="0 0 0">
         <a-entity id="camera" acceleration="200w" camera look-controls wasd-controls></a-entity>
     </a-entity>
-
+ -->
+ <a-entity rotation="-30 0 0" position="0 0 0">
+    <a-entity id="camera" acceleration="200w" camera ></a-entity>
+</a-entity>
 
         <!--Placar-->
         <a-text id="placar"
@@ -42,6 +45,8 @@
         geometry="primitive: plane; width: 5; height: auto" 
         material="color: #262626" wrapCount= 35 zOffset= 0.1>
         </a-text>
+
+        
                   
 
     <!-- chao da mesa -->
@@ -77,6 +82,11 @@
         <a-box id="inimigo" mov-inimigo color="#ad0a0a" rotation="0 90 0" position="0 1 -17" depth="5"></a-box>
 
     </a-box>
+
+    <a-text id="creditos"
+        value="Habacuque Boy e Pedro Jandre" rotation="-30 0 0" position="-5.6 1 -7 " color="#000000" align="center" width= 10 scale="1 1 1"
+         wrapCount= 35 zOffset= 0.1>
+        </a-text>
 
 
 </a-scene>
